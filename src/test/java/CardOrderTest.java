@@ -9,7 +9,7 @@ import java.util.List;
 
 public class CardOrderTest {
     private WebDriver driver;
-//    private ChromeOptions options;
+    private ChromeOptions options;
 
     @BeforeAll
     static void setUpAll() {
@@ -18,11 +18,11 @@ public class CardOrderTest {
 
     @BeforeEach
     void setUp() {
-//        options = new ChromeOptions();
-//        options.addArguments("--disable-dev-shm-usage");
-//        options.addArguments("--no-sandbox");
-//        options.addArguments("--headless");
-        driver = new ChromeDriver();
+        options = new ChromeOptions();
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        driver = new ChromeDriver(options);
     }
 
     @AfterEach
